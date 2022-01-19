@@ -1,3 +1,3 @@
-# ML-workflows
+# Workflows
 
-Repository for using ML workflows with Flashs-X
+Repository for integrating ML workflows with Flash-X

@@ -1,0 +1,12 @@
+# Maplefile for Flash-X
+# VARIABLE                                             DESCRIPTION
+# ----------------------------------------------------------------
+# base                Name of the base image
+# container           Name of the local container
+# target              Name of the target dir to mount source dir
+# backend             Container backend (docker/singularity)
+
+base="docker://akashdhruv/flashx:boiling"
+container="flashx"
+target="/home/mount/simulation"
+backend="singularity"

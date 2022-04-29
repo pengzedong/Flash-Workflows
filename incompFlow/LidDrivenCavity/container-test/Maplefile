@@ -1,7 +1,7 @@
 # Maplefile for Flash-X
 
 # Name of the base image
-base="https://akashdhruv/flashx:lidcav"
+base="docker://akashdhruv/flashx:lidcav"
 
 # Name of the default image
 image="lidcav"
@@ -13,7 +13,7 @@ container="lidcav"
 target="/home/mount/lidcav"
 
 # Container backend
-backend="docker"
+backend="singularity"
 
 # Default command for run
 run="/home/run/flashx"

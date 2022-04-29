@@ -11,4 +11,4 @@ Categories of workflows that fall under management of this repository.
 
 
 
-Directory structure is organized based on ```source/Simulation/SimulationMain``` directory of Flash-X. With the idea that it may live as a submodule under ``source/Simulation/SimulationWorkflows```
+Directory structure is organized based on ```source/Simulation/SimulationMain``` of Flash-X. With the idea that it may live as a submodule under ``source/Simulation/SimulationWorkflows```

@@ -1,0 +1,4 @@
+Weak scaling test.
+
+- Compare pseudoUG for AMReX and PARAMESH. Increase nodes in z-direction by zmax = 1,2,4,8,...
+- Compare multigrid convergence/speed with increasing refinement levels, keep domain size consistent

@@ -1,16 +1,19 @@
 # Maplefile for Flash-X
 
 # Name of the base image
-base="docker://akashdhruv/flashx:boiling"
+base="akashdhruv/flashx:boiling"
+
+# Name of the default image
+image="boiling"
 
 # Name of the local container
-container="flashx"
+container="boiling"
 
 # Name of the mount directory inside the container
-target="/home/mount/simulation"
+target="/home/mount/boiling"
 
 # Container backend
-backend="singularity"
+backend="docker"
 
 # Default command for run
 run="/home/run/flashx"

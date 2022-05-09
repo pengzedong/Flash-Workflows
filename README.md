@@ -15,4 +15,4 @@ Directory structure is organized based on ```source/Simulation/SimulationMain```
 
 Create a folder for your workflows at the level of specific simulation directory
 
-- Add parfiles, performance logs, Maplefiles, Dockerfiles, API keys, and provide a README on your organization structure
+- Add parfiles, Maplefiles, Dockerfiles, API keys, and provide a README for individual simulations

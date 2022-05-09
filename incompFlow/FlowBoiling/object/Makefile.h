@@ -126,7 +126,6 @@ LIB_AMREX  = -L${AMREX_PATH}/lib -lamrex -lpthread
 LIB_BITTREE = -L${BITTREE_PATH}/lib -lbittree
 LIB_STDCXX = -lstdc++
 LIB_LAPACK = -llapack -lblas
-LIB_RUNTIME = -L/home/akash/Desktop/Akash/Postdoc/orchestrationruntime/runtime_2d_AMReX -lruntime
 
 # Uncomment the following line to use electic fence memory debugger.
 # Need the following environmental variable (see env.sh):

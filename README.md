@@ -4,7 +4,7 @@ Repository for Flash-X Workflows.
 
 Categories of workflows that fall under management of this repository.
 
-1. Data analysis workflows for research articles, papers, etc.
+1. Data analysis/reproducibility workflows for research articles, papers, etc.
 2. Machine learning workflows
 3. Workflows using Flash-X container to run on cloud computing environments, and on HPC machines with singularity support
 

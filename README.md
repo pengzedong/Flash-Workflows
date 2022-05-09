@@ -1,4 +1,4 @@
-# Workflows
+# Flash-X Workflows
 
 Repository for Flash-X Workflows. 
 

@@ -1,4 +1,0 @@
-Weak scaling tests
-
-- python3 weak_scaling_htr.py to generate the hdf5 heater file (you will need scipy library for this)
-- scale all dimensions and nblocks  by a factor of 2

@@ -19,7 +19,7 @@ ins_gravY           = -1.0
 # Gas density and viscosity scaled by liquid
 mph_rhoGas  = 0.005
 mph_muGas   = 0.02
-mph_iPropSmear = 1.0
+mph_iPropSmear = 2.0
 
 # Gas thermal conductivity and specific heat
 mph_thcoGas = 0.2
@@ -38,7 +38,7 @@ ht_Prandtl = 8.0
 # Heater parameters
 sim_nucSeedRadius =  0.1 # Re-nucleation seed size
 sim_numHeaters    =  1   # Number of heaters
-sim_heaterName    = "weak_scaling"
+sim_heaterName    = "flow_boiling"
 sim_heaterShowInfo = .FALSE.
 
 # Outlet parameters
@@ -48,9 +48,8 @@ sim_outletBuffer = 0.1 # Outlet Buffer
 geometry	= "cartesian"
 
 #       Size of computational volume
-#       Size of computational volume
-xmin		= -4.0
-xmax		=  4.0
+xmin		= -12.0
+xmax		=  12.0
 ymin		=  0.0
 ymax		=  4.0
 zmin            = -2.0
@@ -70,6 +69,7 @@ log_file	= "INS_Flow_Boiling.log"
 basenm		= "INS_Flow_Boiling_"
 restart         = .false.
 nend            = 10000000
+#nend  = 100
 tmax            = 40.
 ins_cflFlg      = 1
 ins_cfl         = 0.05
@@ -87,19 +87,19 @@ plot_var_2      = "velx"
 plot_var_3      = "vely"
 plot_var_4      = "dfun"
 plot_var_5      = "temp"  
-plot_var_6      = "dust"
+plot_var_6      = "mflx"
 
 checkpointFileNumber = 0
-checkpointFileIntervalTime = 0.5
+checkpointFileIntervalTime = 1.0
 checkpointFileIntervalStep = 0
 
 plotFileNumber = 0
-plotFileIntervalTime = 0.1
+plotFileIntervalTime = 0.5
 plotFileIntervalStep = 0
 ignoreForcedPlot = .TRUE.
 
 # AMR parameters
-nblockx	= 16
+nblockx	= 48
 nblocky	= 8
 nblockz = 8
 nfres   = 10000000
@@ -112,7 +112,7 @@ flux_correct    = .true.
 
 # AMReX Poisson Solver Parameters
 gr_amrexMG_composite_solve = ".TRUE."
-gr_amrexMG_Tol = 1e-13
+gr_amrexMG_Tol = 1e-12
 gr_amrexMG_max_iter = 1000
 
 # HYPRE Poisson Solver Parameters

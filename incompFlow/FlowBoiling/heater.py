@@ -1,44 +1,43 @@
 """
-
-DESCRIPTION:
-
-	Script to create hdf5 file for heater
-
+DESCRIPTION: Script to create hdf5 file for heater
 """
 
 import numpy
 import h5py
 from scipy.stats import qmc
 
-def write_heater_info():
+def write_heater_info(filename,bounds,numSites):
 
-    filename = "weak_scaling_hdf5_htr_0001"
-
+    # Create writable hdf5 file
     filename_write = h5py.File(filename, "w")
 
-    htr_xMin = -20.0
-    htr_xMax =  20.0
-    htr_zMin = -10.0
-    htr_zMax =  10.0
-    htr_yMin =  0.0
-    htr_yMax =  1e-13
+    # Extract heater bounds
+    htr_xMin, htr_xMax = bounds[0,:]
+    htr_yMin, htr_yMax = bounds[1,:]
+    htr_zMin, htr_zMax = bounds[2,:] 
 
+    # Extract numSites
+    nuc_numSites = numSites
+
+    # Set heater wall temperature
     htr_wallTemp = 1.0
 
+    # Set contact angles, 
+    # threshold velocity for contact line, 
+    # and nucleation wait time
     nuc_advAngle = 90.0
     nuc_rcdAngle = 45.0
     nuc_velContact = 0.2
     nuc_waitTime = 0.2
 
-    nuc_numSites = 3000
-
+    # Create arrays for site density
     nuc_xSite = numpy.ndarray([nuc_numSites], dtype=float)
     nuc_ySite = numpy.ndarray([nuc_numSites], dtype=float)
     nuc_zSite = numpy.ndarray([nuc_numSites], dtype=float)
     nuc_radii = numpy.ndarray([nuc_numSites], dtype=float)
 
-    # Generate using halton sequence
-    # TODO improve this interface
+    # Generate nucleation sites using a halton
+    # sequence
     halton = qmc.Halton(d=2, seed=1)
     haltonSample = halton.random(nuc_numSites)
 
@@ -47,6 +46,7 @@ def write_heater_info():
     nuc_ySite[:] = 1e-13
     nuc_radii[:] = 0.2
 
+    # Write heater info to hdf5 file
     filename_write.create_dataset(
         "heater/xMin", data=htr_xMin, shape=(1), dtype="float32"
     )
@@ -83,6 +83,7 @@ def write_heater_info():
         "heater/nucWaitTime", data=nuc_waitTime, shape=(1), dtype="float32"
     )
 
+    # Write site info to hdf5 file
     filename_write.create_dataset(
         "site/num", data=nuc_numSites, shape=(1), dtype="int32"
     )
@@ -106,8 +107,20 @@ def write_heater_info():
 
 
 def main():
-    write_heater_info()
 
+    # Set heater bounds
+    bounds = numpy.zeros([3,2], dtype=float)
+    bounds[0,:] = [-11.0, 11.0]
+    bounds[1,:] = [0.0  , 1e-13]
+    bounds[2,:] = [-2.0 , 2.0]
+
+    # Set number of sites
+    numSites = 900
+
+    # Set heater file name
+    filename = "flow_boiling_hdf5_htr_0001"
+
+    write_heater_info(filename,bounds,numSites)
 
 if __name__ == "__main__":
     main()

@@ -15,6 +15,6 @@ To run this workflow using docker/singularity, do the following:
 
 4. Execute ```python3 heater.py``` to build the hdf5 heater file. Set the heater name in ```flash.par```
 
-5. Run a container using the local image: ```maple container run "/home/run/flashx"
+5. Run a container using the local image: ```maple container run "/home/run/flashx"```
 
 6. If ```backend="singularity"```, you can run the container in parallel: ```mpirun -n <num_procs> maple container run "/home/run/flashx"``` 

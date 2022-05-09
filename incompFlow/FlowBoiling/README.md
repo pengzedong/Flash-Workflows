@@ -1,6 +1,10 @@
-### Reproducible capsule for FlowBoiling simulation using Flash-X
-The docker image for the 2D simulation is located at: https://hub.docker.com/layers/210691482/akashdhruv/flashx/flow-boiling/images/sha256-5faabfac58a34e96d5950924e3a3e93d900a33865724fd5e3b25f9c094884867?context=repo
+## Reproducible capsule for FlowBoiling simulation using Flash-X
+- The docker image for the 2D simulation is located at: https://hub.docker.com/layers/210691482/akashdhruv/flashx/flow-boiling/images/sha256-5faabfac58a34e96d5950924e3a3e93d900a33865724fd5e3b25f9c094884867?context=repo
 
+- 3D simulation can be compiled directly using the source code under ```object```
+
+
+### Using container for 2D simulation
 To run this workflow using docker/singularity, do the following:
 
 1. Install Maple

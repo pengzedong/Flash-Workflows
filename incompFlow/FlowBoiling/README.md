@@ -4,7 +4,7 @@
 - 3D simulation can be compiled directly using the source code under ```object/```
 
 
-### Using container for 2D simulation
+## Using container for 2D simulation
 To run this workflow using docker/singularity, do the following:
 
 1. Install Maple

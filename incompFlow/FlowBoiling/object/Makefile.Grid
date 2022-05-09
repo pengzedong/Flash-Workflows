@@ -1,0 +1,199 @@
+Grid += Grid_init.o \
+	Grid_getTileIterator.o Grid_releaseTileIterator.o \
+	Grid_ascModule.o Grid_ascGetBlkPtr.o Grid_ascReleaseBlkPtr.o \
+	Grid_conserveFluxes.o \
+	Grid_communicateFluxes.o \
+	Grid_getLocalNumBlks.o \
+        Grid_getNumBlksFromType.o \
+        Grid_getMaxRefinement.o \
+	Grid_fillGuardCells.o Grid_notifySolnDataUpdate.o \
+	Grid_markRefineDerefine.o \
+	Grid_putFluxData.o \
+	Grid_putFluxData_block.o \
+	Grid_getFluxData_block.o \
+        Grid_getFluxCorrData_block.o Grid_getFluxCorrData_xtra.o\
+	Grid_correctFluxData.o Grid_correctFluxData_xtra.o \
+	Grid_outsideBoundBox.o \
+	Grid_getDomainBoundBox.o \
+	Grid_updateRefinement.o \
+	Grid_getDeltas.o \
+	Grid_getCellCoords.o \
+	Grid_getCellFaceAreas.o \
+	Grid_getCellVolumes.o \
+	Grid_getBlkIndexLimits.o Grid_getBlkCornerID.o \
+	Grid_getBlkCenterCoords.o \
+	Grid_getDomainBC.o \
+	Grid_getSingleCellCoords.o Grid_sendOutputData.o Grid_finalize.o \
+	Grid_guardCellMaskHook.o \
+	Grid_putLocalNumBlks.o Grid_dump.o \
+	Grid_initDomain.o \
+	Grid_markRefineSpecialized.o \
+	Grid_restrictAllLevels.o Grid_restrictByLevels.o \
+	Grid_getGlobalIndexLimits.o \
+	Grid_getBlkType.o \
+	Grid_moveParticles.o \
+	Grid_computeUserVars.o \
+	Grid_unitTest.o \
+	Grid_getMinCellSize.o \
+	Grid_getMinCellSizes.o \
+	Grid_subcellGeometry.o \
+	Grid_countParticlesByBlock.o \
+	Grid_getGeometry.o Grid_sortParticles.o Grid_countParticles.o \
+	Grid_mapMeshToParticles.o Grid_mapMeshToParticles_pc.o Grid_mapParticlesToMesh.o \
+	Grid_solvePoisson.o Grid_conserveField.o Grid_interface.o \
+        Grid_ptDataTypes.o \
+        Grid_bcApplyToRegion.o\
+	Grid_bcApplyToRegionSpecialized.o\
+	Grid_bcApplyToRegionMixedGds.o\
+	Grid_pfft.o Grid_pfftInit.o Grid_pfftFinalize.o\
+	Grid_pfftGetIndexLimits.o Grid_pfftMapToInput.o Grid_pfftMapFromOutput.o \
+	Grid_getMaxCommonRefinement.o Grid_setFluxHandling.o \
+        Grid_setInterpValsGcell.o \
+	Grid_GCTransferOneBlk.o \
+	Grid_getNumVars.o \
+	Grid_computeVarMean.o Grid_computeVarNorm.o Grid_computeVarDiff.o \
+	Grid_setSolverDbgContextInfo.o \
+	Grid_primitiveToConserve.o \
+	Grid_conserveToPrimitive.o \
+	Grid_addToVar.o Grid_smoothVar.o \
+	Grid_parseNonRep.o Grid_formatNonRep.o Grid_getVarNonRep.o \
+	Grid_sbSelectMaster.o Grid_sbBroadcastParticles.o Grid_updateSolidBodyForces.o Grid_solidBodyUnitTest.o \
+	Grid_receiveInputData.o \
+	Grid_getNeighProcList.o \
+	Grid_getBlkNeighLevels.o \
+	Grid_makeVector.o \
+	Grid_zeroFluxData.o \
+	Grid_addFineToFluxRegister.o \
+	Grid_addFineToFluxRegister_block.o \
+	Grid_addCoarseToFluxRegister.o \
+	Grid_setWork.o \
+	Grid_setWorkBounds.o \
+	Grid_setWorkDefault.o
+
+Grid += Grid_init.o Grid_coordTransfm.o
+
+Grid += Grid_tile.o Grid_iterator.o
+
+Grid += Grid_properTilingWanted.o
+
+# Makefile for [source/Grid/GridBoundaryConditions]
+Grid += gr_bcData.o gr_bcData.o gr_bcGetRegion.o gr_bcPutRegion.o  gr_extendedGetCellCoords.o
+
+Grid += gr_bcMapBcType.o gr_hgMapBcType.o gr_mgMapBcType.o gr_bicgMapBcType.o
+
+Grid += gr_bcApplyToOneFaceAllGds.o
+# Makefile for [source/Grid/GridMain]
+Grid +=  Grid_getSingleCellVol.o \
+	gr_initGeometry.o \
+	Grid_renormAbundance.o Grid_limitAbundance.o Grid_renormMassScalars.o \
+	gr_setDataStructInfo.o gr_findMean.o \
+	gr_GCAllocScratch.o gr_GCScratchData.o gr_GCReleaseScratch.o \
+	gr_GCTransferOneBlk.o \
+	gr_tile2txtytz.o \
+	gr_tilePolicyData.o
+# Makefile for [source/Grid/GridMain/AMR]   
+
+Grid += Grid_data.o \
+		gr_setGcFillNLayers.o gr_setMasks_gen.o gr_makeMaskConsistent_gen.o \
+		gr_estimateError.o gr_sortByWorkTools.o
+Grid += gr_amrexInterface.o \
+        gr_physicalMultifabs.o \
+        gr_fluxregister_mod.o \
+        gr_amrexInit.o gr_amrexFinalize.o \
+        gr_clearLevelCallback.o \
+        gr_remakeLevelCallback.o \
+        gr_initNewLevelCallback.o \
+        gr_makeFineLevelFromCoarseCallback.o \
+        gr_markRefineDerefineCallback.o \
+        gr_preinterpolationWork.o \
+        gr_postinterpolationWork.o \
+        gr_conserveToPrimitive.o \
+        gr_primitiveToConserve.o \
+        gr_cleanDensityData.o \
+        gr_cleanEnergyData.o \
+        gr_fillPhysicalBC.o \
+        gr_getFinestLevel.o \
+        gr_restrictAllLevels.o \
+        gr_copyFabInteriorToRegion.o \
+        gr_copyGuardcellRegionToFab.o \
+        block_1lev_iterator.o \
+        gr_writeData.o \
+        gr_markInRectangleForCallback.o \
+        gr_markInRadiusForCallback.o \
+        gr_markVarBoundsForCallback.o
+
+Grid += gr_specificData.o gr_initSpecific.o \
+        gr_updateData.o
+
+Grid += gr_solversData.o
+
+Grid += gr_amrexMultigridData.o
+Grid += gr_ptInterface.o gr_ptInit.o gr_ptMove.o \
+        gr_ptFinalize.o gr_ptMarkRefineDerefine.o \
+        gr_ptMoveOffBlk.o\
+        gr_ptFillBlkParticleInfo.o gr_ensureValidNeighborInfo.o \
+        gr_solversInit.o gr_solversFinalize.o gr_solversTestInit.o \
+	gr_bcInterface.o gr_bcHseInit.o gr_bcApplyToAllBlks.o gr_bcApplyToOneFace.o \
+	gr_hgInit.o  gr_mpoleInit.o gr_isoMpoleInit.o gr_pfftInit.o \
+	gr_hgFinalize.o  gr_mpoleFinalize.o gr_isoMpoleFinalize.o gr_pfftFinalize.o \
+        gr_bcInit.o gr_bcFinalize.o gr_hgInterface.o gr_pfftInterface.o \
+	gr_isoInterface.o gr_ptMapInit.o gr_hgPfftInit.o gr_hgPfftFinalize.o \
+	gr_interface.o gr_interfaceTypeDecl.o gr_pfftInterfaceTypeDecl.o \
+	gr_setBlockType.o \
+	gr_mgInterface.o gr_mgInit.o gr_mgFinalize.o gr_mgPfftInit.o gr_mgPfftFinalize.o \
+        gr_bicgInterface.o gr_bicgInit.o gr_bicgFinalize.o \
+        gr_getRegionDataCoordinates.o
+
+Grid += gr_hg_amr_1blk_bcset_work.o gr_pfftPoissonDirect.o
+
+Grid +=  gr_hypreInterface.o gr_hypreInit.o gr_hypreFinalize.o
+
+Grid +=  gr_amrexMultigridInterface.o gr_amrexMultigridInit.o gr_amrexMultigridFinalize.o
+
+Grid += gr_mpoleAllocateRadialArrays.o   \
+        gr_mpoleCen1Dspherical.o         \
+        gr_mpoleCen2Dcylindrical.o       \
+        gr_mpoleCen3Dcartesian.o         \
+        gr_mpoleCenterOfExpansion.o      \
+        gr_mpoleCollectMoments.o         \
+        gr_mpoleDeallocateRadialArrays.o \
+        gr_mpoleDumpMoments.o            \
+        gr_mpoleFinalize.o               \
+        gr_mpoleHeapsort.o               \
+        gr_mpoleInit.o                   \
+        gr_mpoleMom1Dspherical.o         \
+        gr_mpoleMom2Dcylindrical.o       \
+        gr_mpoleMom3Dcartesian.o         \
+        gr_mpoleMomBins1Dspherical.o     \
+        gr_mpoleMomBins2Dcylindrical.o   \
+        gr_mpoleMomBins3Dcartesian.o     \
+        gr_mpoleMoments.o                \
+        gr_mpolePot1Dspherical.o         \
+        gr_mpolePot2Dcylindrical.o       \
+        gr_mpolePot3Dcartesian.o         \
+        gr_mpolePotentials.o             \
+        gr_mpolePrintRadialInfo.o        \
+        gr_mpoleRad1Dspherical.o         \
+        gr_mpoleRad2Dcylindrical.o       \
+        gr_mpoleRad3Dcartesian.o         \
+        gr_mpoleRadialSampling.o         \
+        gr_mpoleSetInnerZoneGrid.o       \
+        gr_mpoleSetOuterZoneGrid.o       \
+        gr_mpoleSetRadialBinData.o
+
+Grid += gr_sbInterface.o gr_sbInit.o gr_sbSendBoundBox.o\
+	gr_sbSendParticles.o gr_sbCreateParticles.o gr_sbGetProcBlock.o gr_sbSendPosn.o gr_sbStoreParticlesPerProc.o \
+	gr_sbSendParticleCount.o gr_sbSendParticles.o gr_sbUpdateForces.o gr_sbSendForces.o gr_sbFinalize.o
+
+Grid += gr_bhInterface.o gr_bhInit.o gr_bhFinalize.o
+
+Grid += gr_xyzToBlockLevel.o gr_xyzToBlock.o
+
+Grid += gr_forceDerefInRadius.o
+Grid += gr_markRefineDerefine.o gr_estimateBlkError.o
+
+Grid += gr_blockMatch.o
+Grid += gr_ptWritePCs.o
+
+gr_interface.o     : gr_interfaceTypeDecl.o
+gr_pfftInterface.o : gr_pfftInterfaceTypeDecl.o

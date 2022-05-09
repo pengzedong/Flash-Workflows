@@ -1,0 +1,15 @@
+HeatAD += HeatAD_interface.o \
+          HeatAD_init.o \
+          HeatAD_finalize.o \
+          HeatAD_solve.o \
+          HeatAD_advection.o \
+          HeatAD_diffusion.o \
+          HeatAD_indicators.o \
+          HeatAD_getGridVar.o \
+          HeatAD_getScalarProp.o \
+          HeatAD_reInitGridVars.o
+HeatAD += HeatAD_data.o
+HeatAD += ht_interface.o \
+          ht_advectionInterface.o \
+          ht_advectionInit.o \
+          ht_indicators.o

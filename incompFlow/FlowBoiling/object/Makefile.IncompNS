@@ -1,0 +1,30 @@
+IncompNS += IncompNS_interface.o \
+	    IncompNS_init.o \
+            IncompNS_computeDt.o \
+	    IncompNS_finalize.o \
+            IncompNS_velomgToCenter.o \
+            IncompNS_getScalarProp.o \
+            IncompNS_getGridVar.o \
+            IncompNS_getVectorProp.o \
+            IncompNS_setVectorProp.o \
+            IncompNS_advection.o \
+            IncompNS_diffusion.o \
+            IncompNS_predictor.o \
+            IncompNS_divergence.o \
+            IncompNS_setupPoisson.o \
+            IncompNS_corrector.o \
+            IncompNS_indicators.o \
+            IncompNS_reInitGridVars.o
+
+IncompNS += IncompNS_data.o
+IncompNS += ins_interface.o \
+            ins_init.o \
+            ins_indicators.o \
+            ins_divergence.o \
+            ins_diffusion_vardens.o \
+            ins_corrector.o \
+            ins_setupPoissonRhs.o \
+            ins_computeDtLocal.o \
+            ins_extrasInterface.o \
+            ins_velToCenter.o \
+            ins_omgToCenter.o

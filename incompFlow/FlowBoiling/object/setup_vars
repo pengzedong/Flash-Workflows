@@ -1,0 +1,186 @@
+Name: alph
+Location: physics/HeatAD/HeatADMain/varDiffusion
+Type: Variable
+Description:
+
+
+Name: dfrc
+Location: physics/Multiphase/MultiphaseMain
+Type: Variable
+Description:
+
+
+Name: dfun
+Location: physics/Multiphase/MultiphaseMain
+Type: Variable
+Description:
+
+
+Name: dust
+Location: physics/IncompNS/IncompNSMain
+Type: Variable
+Description:
+
+
+Name: hdn0
+Location: physics/Multiphase/MultiphaseMain
+Type: Variable
+Description:
+
+
+Name: hfgs
+Location: physics/Multiphase/MultiphaseEvap
+Type: Variable
+Description:
+
+
+Name: hflq
+Location: physics/Multiphase/MultiphaseEvap
+Type: Variable
+Description:
+
+
+Name: htn0
+Location: physics/HeatAD/HeatADMain
+Type: Variable
+Description:
+
+
+Name: htn1
+Location: physics/HeatAD/HeatADMain
+Type: Variable
+Description:
+
+
+Name: hvn0
+Location: physics/IncompNS/IncompNSMain
+Type: Face Variable
+Description:
+
+
+Name: hvn1
+Location: physics/IncompNS/IncompNSMain
+Type: Face Variable
+Description:
+
+
+Name: mflx
+Location: physics/Multiphase/MultiphaseEvap
+Type: Variable
+Description:
+
+
+Name: nrmx
+Location: physics/Multiphase/MultiphaseMain
+Type: Variable
+Description:
+
+
+Name: nrmy
+Location: physics/Multiphase/MultiphaseMain
+Type: Variable
+Description:
+
+
+Name: nrmz
+Location: physics/Multiphase/MultiphaseMain
+Type: Variable
+Description:
+
+
+Name: omgm
+Location: physics/IncompNS/IncompNSExtras
+Type: Variable
+Description:
+
+
+Name: pgn1
+Location: physics/IncompNS/IncompNSMain
+Type: Face Variable
+Description:
+
+
+Name: pgn2
+Location: physics/IncompNS/IncompNSMain/varDens
+Type: Face Variable
+Description:
+
+
+Name: pres
+Location: physics/IncompNS/IncompNSMain
+Type: Variable
+Description:
+
+
+Name: rhof
+Location: physics/IncompNS/IncompNSMain/varDens
+Type: Face Variable
+Description:
+
+
+Name: sigm
+Location: physics/IncompNS/IncompNSMain/varDens
+Type: Face Variable
+Description:
+
+
+Name: temp
+Location: physics/HeatAD/HeatADMain
+Type: Variable
+Description:
+
+
+Name: tfrc
+Location: physics/HeatAD/HeatADMain
+Type: Variable
+Description:
+
+
+Name: tvis
+Location: physics/IncompNS/IncompNSMain
+Type: Variable
+Description:
+
+
+Name: velc
+Location: physics/IncompNS/IncompNSMain
+Type: Face Variable
+Description:
+
+
+Name: velc
+Location: physics/IncompNS/IncompNSMain
+Type: Flux
+Description:
+
+
+Name: velx
+Location: physics/IncompNS/IncompNSExtras
+Type: Variable
+Description:
+
+
+Name: vely
+Location: physics/IncompNS/IncompNSExtras
+Type: Variable
+Description:
+
+
+Name: velz
+Location: physics/IncompNS/IncompNSExtras
+Type: Variable
+Description:
+
+
+Name: vfrc
+Location: physics/IncompNS/IncompNSMain
+Type: Face Variable
+Description:
+
+
+Name: visc
+Location: physics/IncompNS/IncompNSMain/varDens
+Type: Variable
+Description:
+
+

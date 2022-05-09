@@ -17,8 +17,21 @@ To run this workflow using docker/singularity, do the following:
   
 3. Build the local image: ```maple image build```
 
-4. Execute ```python3 heater.py``` to build the hdf5 heater file. Set the heater name in ```flash.par```
+4. Run ```python3 heater.py``` to build the hdf5 heater file. Set the heater name in ```flash.par```
 
 5. Run a container using the local image: ```maple container run "/home/run/flashx"```
 
-6. If ```backend="singularity"```, you can run the container in parallel: ```mpirun -n <num_procs> maple container run "/home/run/flashx"``` 
+6. If ```backend="singularity"```, you can run the container in parallel: ```mpirun -n <num_procs> maple container run "/home/run/flashx"```
+
+## Building 3D simulation from source
+To compile and run the 3D simulation do the following
+
+1. Set environment variables ```MPI_PATH```, ```HDF5_PATH```, ```AMREX2D_PATH```, and ```AMREX3D_PATH``` for paths to your local MPI, parallel HDF5, and AMReX 2D/3D libraries
+
+2. Run ```cd object && make``` to compile the simulation
+
+3. Run ```python3 flow_boiling_htr.py``` to build the hdf5 heater file. Set heater name in ```flash.par```
+
+5. Run ```mpirun -n <num_procs> ./flashx``` to start the simulation
+
+ 

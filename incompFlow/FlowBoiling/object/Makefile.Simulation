@@ -1,0 +1,37 @@
+Simulation += Simulation_initSpecies.o Simulation_mapIntToStr.o \
+              Simulation_mapParticlesVar.o Simulation_defineDomain.o \
+              Simulation_mapStrToInt.o Simulation_init.o \
+              Simulation_initBlock.o Simulation_finalize.o \
+              Simulation_getRenormGroup.o Simulation_sendOutputData.o \
+              Simulation_getVarnameType.o Simulation_guardCellMaskHook.o \
+	      Simulation_initRestart.o Simulation_interface.o \
+	      Simulation_customizeProlong.o Simulation_computeAnalytical.o \
+	      Simulation_adjustEvolution.o Simulation_freeUserArrays.o \
+              Simulation_wantsRebalance.o
+Simulation += sim_heaterData.o \
+              sim_heaterInterface.o \
+              sim_heaterInit.o \
+              sim_heaterFinalize.o \
+              sim_heaterRead.o \
+              sim_heaterLSReInit.o \
+              sim_heaterCheckSites.o \
+              sim_heaterInitBlk.o \
+              sim_heaterLSReInitBlk.o \
+              sim_heaterCheckSitesBlk.o \
+              sim_heaterApplyBCToRegion.o \
+              sim_heaterTagSites.o
+Simulation += sim_inletData.o \
+              sim_inletInterface.o \
+              sim_inletInit.o \
+              sim_inletFinalize.o \
+              sim_inletApplyBCToRegion.o
+Simulation += sim_outletData.o \
+              sim_outletInterface.o \
+              sim_outletInit.o \
+              sim_outletFinalize.o \
+              sim_outletSetForcing.o \
+              sim_outletLSDamping.o \
+              sim_outletVelFrc.o \
+              sim_outletVelFrcPhased.o \
+              sim_outletApplyBCToRegion.o
+Simulation += Simulation_data.o

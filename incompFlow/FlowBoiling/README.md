@@ -9,7 +9,7 @@ To run this workflow using docker/singularity, do the following:
 
 1. Install Maple
   - This can be done directly through source: https://github.com/akashdhruv/Maple
-  - Or using ```pip3 install PyMaple```
+  - Or using ```pip3 install MapleUtil```
    
 2. Edit the Maplefile to specify backend
   - For ```backend="docker"``` set ```base=akashdhruv/flashx:flow-boiling```

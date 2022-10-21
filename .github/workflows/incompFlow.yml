@@ -22,6 +22,7 @@ jobs:
           cd incompFlow/LidDrivenCavity
           maple image build
           mpirun -n 1 maple container run "/home/run/flashx"
+          
 
   PoolBoiling:
     name: "PoolBoiling"
